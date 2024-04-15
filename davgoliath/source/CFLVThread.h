@@ -1,0 +1,64 @@
+/* ==================================================================================================
+ * CFLVThread.h															   
+ *    Goliath - a Finder like application that implements WebDAV
+ *    Copyright (C) 1999-2001  Thomas Bednarz
+ *
+ *    This program is free software; you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation; either version 2 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program; if not, write to the Free Software Foundation,
+ *    Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ *
+ *  For questions, suggestions, bug-reports, enhancement-requests etc.
+ *  I may be contacted at:
+ *
+ *  tombednarz@hotmail.com
+ * ===========================================================================
+ */
+#pragma once
+ 
+#ifndef __CFLVTHREAD_H__
+#define __CFLVTHREAD_H__
+
+#include <LThread.h>
+#include <CFLVDAVRequest.h>
+#include <DAVMessages.h>
+#include <CDAVContext.h>
+
+class CFLVThread : public PP_PowerPlant::LThread {
+
+   public:
+      CFLVThread(class CDAVContext *ctx, class CDAVTableWindow *wnd);
+      CFLVThread(class CDAVContext *ctx, class CDAVTableWindow *wnd, bool encodingDisbled);
+      virtual ~CFLVThread();
+      
+      virtual void cancelOperation() {}; 
+      
+   protected:
+              void		Init();
+   	  virtual void*		Run();
+      virtual void*     _executeDAVTransaction()=0;
+      virtual void      _OnXMLRequestError();
+      
+      		  bool		_RezForksAreHidden();
+      		  
+      		  bool		_EncodingDisabled();
+      		  
+      class CDAVContext     mContext;
+	  CFLVDAVRequest     mRequest;
+      class CDAVTableWindow *mWnd;
+
+   private:
+      bool					 mEncodingDisabled;
+      bool                   mRezForksAreHidden;
+};
+
+#endif

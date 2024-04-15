@@ -1,0 +1,73 @@
+To implement SSL via PowerPlant, the following steps are necessary:
+
+1. Download OpenSSL 0.9.5a (or later) from www.openssl.org (use Netscape
+as the web page won't show correctly on Explorer.)
+
+2. Run the script mklinks.as in the MacOS folder.
+
+3. (Optional) You may discard the folders apps, demos, doc, rsaref, perl, tools,
+VMS, and probably some others in the OpenSSL directory.
+
+4. Add the attached files to OpenSSL/MacOS/, replacing the originals if needed:
+	opensslconf.h,
+	CompileFlags.h,
+	CompileOptions.h
+	_MWERKS_prefix.h
+	
+5. Open the project OpenSSL.mcp.
+
+6. In the access paths for the targets LibSSL PPC and LibCrypto PPC,
+remove access paths referring to the GUSI directory (GUSI is an Open
+Source implementation of sockets on the Mac, which we don't use.)
+
+7. (Optional) You may set any flags you wish in CompileOptions.h, if
+you know what you are doing.
+
+8. Build the libraries LibSSL.PPC.Lib and LibCrypto.PPC.Lib using the
+OpenSSL.mcp project.
+
+9. Build the library SSLGlue.Lib using the attached project SSLGlue.mcp.
+This is needed as an intermediate API between the Main project and the
+SSL project since OpenSSL does not distinguish between "..." and <...>
+#include paths, while your main project probably does.
+
+10. Add the above three libraries (LibSSL, LibCrypto, SSLGlue) to your
+project.
+
+11. Add the file Randomizer.cpp to your project. A newer version than that
+on the OpenSSL distribution is attached.
+
+12. Following the example in the attached file Certificates.c, add as many
+certificates as you wish from the certs folder in the OpenSSL distribution.
+If there are any other you need, they can be exported from IE on Windows
+after logging in to a site which uses them. Make sure you export them in
+Base64 format, then open the ".cer" file with a text editor and copy it
+to your certificate collection.
+
+13. Add the file OpenSSLGlue.cpp to your project.
+
+14. Add a periodic call to the function USecureNetworkFactory::PeriodicAction ()
+to enrich the random number generator with data. Under PowerPlant, you may
+use the LPeriodical subclass LRandomizer.
+
+15. Whenever you need a secure connection, use the call
+USecureNetworkFactory::CreateSecureTCPEndpoint instead of
+UNetworkFactory::CreateTCPEndpoint, and proceed as usual. Make sure you specify
+port 443, which is the standard HTTPS port. This step is handled automatically
+by the LHTTP11Connection class.
+
+
+------------------------------------------------------------------------
+
+Note: A fair bit of the code in OpenSSLGlue.cpp is a hack to get around
+a bug in LOpenTptTCPEndpoint::SendData(). This function invokes itself
+recursively as SendData() (instead of LOpenTptTCPEndpoint::SendData()),
+which means that if it is overloaded precautions must be taken to have
+the appropriate call made. When I wrote OpenSSLGlue.cpp,  I was hoping
+not to replace any Metrowerks code except by overloading functions. In
+the future, this file will be simplified, and users will be required to
+change the offending line in the original SendData().
+
+Note: The glue routines for now only support OpenTransport, and only servers
+using SSL v.3. Both issues can be easily fixed, but I don't think there's
+much need for that.

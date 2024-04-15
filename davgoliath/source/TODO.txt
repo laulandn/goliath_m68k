@@ -1,0 +1,121 @@
+To-Do
+-----
+- continue to enhance error messaging
+- integrate a thread pool
+- move &copy
+- ok button enablement in new folder dlog
+- redraw bug; on horizonal scroll, overhang region sometimes doesn't draw properly
+- icon inside of frame if resource at root of frame is locked
+- lock and unlock of resource at root of frame
+- lock owner bug in lock details
+- Digest Authentication
+- Support NTLM authentication for MSProxy Server
+- in-place edit of props that do a PROPPATCH
+- display of arbitrary properties in main display
+- get an "HTTP/1.1 Unauthorized" if a "—" is in the user name
+- improve display of property names in props dlog; either put ellipses
+  if truncated, or put in a namespace hierarchy (Jim Whitehead
+  <ejw@ics.uci.edu>)
+- I think it would be nice if the supported lock information were better
+  formatted, instead of just displaying the XML. (Jim Whitehead  <ejw@ics.uci.edu>)
+- It would be nice if you could have multiple property windows up
+  simultaneously. (Jim Whitehead  <ejw@ics.uci.edu>)
+- clicking cancel from download with options dialog box quits
+  the application with type 2 error (laji@mail.com)
+- email address in info panel is not selectable... should be for
+  ease of copy/paste - may be OSX only (Bill Bumgarner <bbum@codefab.com>)
+-  background of OK button in prefs panel is white, not grey like
+	rest of window (though window's shouldn't be grey-- it should be the little
+	horizontal lines, right?); OSX Only (Bill Bumgarner <bbum@codefab.com>)
+- When accessing a server using basic authorization, it is possible
+  that the authorization will become invalid below a certain level on that
+  server.  Below that level, it may require a different username/password to
+  access the contents.   Goliath correctly detects/displays the 401 response
+  when the original username/pass are no longer valid, but it should ask for a
+  new user/pass combination and use that user/pass combination anytime it runs
+  into the new authorization realm.  (Bill Bumgarner <bbum@codefab.com>)
+- Streaming ListDirectory (Bill Bumgarner <bbum@codefab.com>)
+- Would be nice to have a ".." or "go to parent" feature on the window (Bill
+  Bumgarner <bbum@codefab.com>)
+- Need to be able to create NULL locks and locks other than
+  exclusive [like being able to both create locks with timeouts and show the
+  timeouts on existing locks] (Bill Bumgarner <bbum@codefab.com>)
+- extend connection saving to not put in user name and password (Beth
+  Rettenmund <bethr@mailcity.com>)
+- encrypt user name and password in connection documents
+- fix data transfer on PromiseHFS to create dummy files so that files are placed
+  properly by the Finder
+- fix end of upload prog bar reset 
+
+Done
+----   
+- It would be nice if you could use the TAB key to go from the URL entry
+  field to the password entry field in the new site dialog box.  I'd like to
+  enter the URL, TAB, press space to activate basic auth, TAB, username, TAB,
+  password, RETURN (Jim Whitehead  <ejw@ics.uci.edu>)
+- rewrite HREF handling to use c-strings instead of Pascal strings (currently,
+  when a URL tops out at 255 chars, Goliath, and DAVLib don't handle it properly)
+- persistent HTTP connections
+- integration w/ OpenSSL
+- DAVLib trace functionality (Jim Whitehead  <ejw@ics.uci.edu>)
+- Preferences menu item should have three dots after it (Bill Bumgarner
+  <bbum@codefab.com>)
+- fix display of DAV:supportedlock in props dlog (reported by Jim Whitehead) 
+- drag&drop upload 
+- fix main window resizing and scrolling issues 
+- progress UI on upload
+- drag-drop of many items at once - failures
+- implement HTTP OPTIONS, add DAVLib API to determine if server supports DAV; integrate 
+   checking into UI.
+- integrate a cross window messaging scheme for data changes
+- implement rename resources
+- use resourcetype to determine CDAVItem type
+- implement delete resources
+- dbl-click to view href in browser
+- on upload of new file, file name is truncated and Kind is not displayed properly
+- clean up cancel in secondary dlogs
+- Commander hierarchy fix when progress dlogs are hidden/closed
+- crash if close window while txn occurring   
+- finish window messaging scheme for data changes
+- finish delete (prune redundant hrefs)
+- fixed bug where responses over 32k weren't processed properly
+- ok button enablement in new connection dlog
+- implement export resources
+- pretty icons via InternetConfig
+- bookmark storage/window
+- put in a Window menu 
+- disable locking menus when not available (via options)
+- GET items recursively
+- compatibility with edocs-online & IIS5
+- implement resizable headers
+- put a 'number of items' field in the header
+- store column widths in connection document
+- store window location in connection document
+- lock information dialog
+- integreate locking into put, mkcol, etc.
+- fixed a bug where in some cases, props weren't fetched on on MKCOL
+- added a "No set lock owner" preference (temp fix for mydocsonline.com)
+- bug - lock a folder and lock icon doesn't show up immediately
+- integreate locking into mkcol (if immediate parent href is locked, send that lock).
+- bug drag and dropping a folder name that already exists
+- only enable Lock related actions if Server OPTIONS returns lock methods available
+- send lock for parent on delete if parent is locked
+- send lock for parent on PUT if parent is locked
+- selection of items based on keystroke
+- refresh bug; sometimes on refresh, one item hangs around as a ghost and is
+  duplicated from the server.  Don't have solid reproduction sequence.
+- verify new code for authentication for proxy servers
+- implement window mgmt in a more finder like way (a collection can either
+  be expanded in a window OR have it's own top level window, not both).
+- display all properties for a given resource
+- enhance progress for single large items and for folders
+- display of arbitrary properties in prop dialog;
+- error on file named 
+  "backstreet boys-medley by dj deny victoriano and dj joseph.mp3"
+  at driveway.com (PETER YEE <peteryee4@yahoo.com>)
+- bug; drag & drop a folder to the Finder; while the export is happening 
+  double click on the folder.  crash
+- binhexing files with resource forks
+- Preferences menu should be under the Goliath (Version 0.7) menu
+  (the leftmost menu) on OSX (Bill Bumgarner <bbum@codefab.com>)
+

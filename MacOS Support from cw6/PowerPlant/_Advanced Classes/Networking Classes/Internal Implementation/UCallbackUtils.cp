@@ -1,0 +1,1 @@
+// ===========================================================================//	UCallbackUtils.cp			PowerPlant 2.1		©1996-1999 Metrowerks Inc.// ===========================================================================//	A collection of utilities for low-level Toolbox callbacks.#include <UCallbackUtils.h>// currently everything is inlined :-)

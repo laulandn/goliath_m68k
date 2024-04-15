@@ -1,0 +1,1 @@
+/* Metrowerks PPC Runtime Support Library  * Copyright © 1995-2002 Metrowerks Corporation.  All rights reserved. * * $Date: 2002/03/15 17:00:17 $ * $Revision: 1.2 $ *//* This prefix used when using MSL shared libraries. */#define _MSL_IMP_EXP __declspec(dllimport)#define _MSL_NO_LOCALE

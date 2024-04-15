@@ -138,8 +138,11 @@ void* CEditPropertiesThread::_executeDAVTransaction() {
 	heading->SetColumnListener(2, table);	
 
 	LStaticText *hdrtext = reinterpret_cast<LStaticText*>(dialog.GetDialog()->FindPaneByID( EDITPROPSDLOGTEXTHDR));
-	
-	std::string hdrTextStr, href = CDAVTranscodeUtils::TranscodeUTF8ToSystemScript(mItem.GetHREF());								
+	#ifdef __POWERPC__
+	std::string hdrTextStr, href = CDAVTranscodeUtils::TranscodeUTF8ToSystemScript(mItem.GetHREF());
+	#else
+	std::string hdrTextStr, href=mItem.GetHREF();
+	#endif								
 	
 	LStr255 hdrTextVal(1000, 18);
 	hdrTextStr.append(hdrTextVal.ConstTextPtr(), hdrTextVal.Length());

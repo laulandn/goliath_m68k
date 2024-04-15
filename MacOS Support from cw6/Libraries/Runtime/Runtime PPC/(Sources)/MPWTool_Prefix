@@ -1,0 +1,1 @@
+/** If you want to use only Apple's StdCLib for standard C functions* in your MPW Tool, uncomment the following line and rebuild the* runtime project.  If defined, you cannot make Cpp tools.*/ //#define Using_StdCLib 1

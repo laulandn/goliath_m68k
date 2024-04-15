@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 2000/01/27 03:21:05 $  *  $Revision: 1.7.18.2 $  *  $NoKeywords: $  * *		Copyright © 1995-1999 Metrowerks, Inc. *		All rights reserved. *//* *	float.h*/#ifndef _FLOAT_H#define _FLOAT_H#include <cfloat>#endif/* * Change record * hh 971206 Created. * hh 991112 fixed "using bug"*/

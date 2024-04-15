@@ -145,7 +145,9 @@ void* CUploadFileThread::_executeDAVTransaction() {
          std::string resName;
          
          resName.append(tmpPstr.ConstTextPtr(), tmpPstr.Length());
+         #ifdef __POWERPC__
          resName = CDAVTranscodeUtils::TranscodeSystemScriptToUTF8(resName);
+         #endif
 
          resStr += resName;
       }
@@ -225,7 +227,9 @@ Boolean CUploadFileThread::_ProcessFolder(FSSpec* theSpec, const std::string& in
    std::string fldrName = inResource;
    LStr255 nameTemp(theSpec->name);
    fldrName.append(nameTemp.ConstTextPtr(), nameTemp.Length());
+   #ifdef __POWERPC__
    fldrName = CDAVTranscodeUtils::TranscodeSystemScriptToUTF8(fldrName);
+   #endif
 
    Boolean exists, doNext=false;
    CDAVRequest::ReqStatus reqStat = mRequest.GetResourceExists(*this, fldrName, _isDirectory(theSpec), exists);
@@ -296,7 +300,9 @@ Boolean CUploadFileThread::_ProcessFile(FSSpec* theSpec, const std::string& inRe
       LStr255 nameTmp(theSpec->name);
       std::string tempResName;
       tempResName.append(nameTmp.ConstTextPtr(), nameTmp.Length());
+      #ifdef __POWERPC
       tempResName = CDAVTranscodeUtils::TranscodeSystemScriptToUTF8(tempResName);
+      #endif
 
       resName += tempResName;
    }

@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 2000/03/16 15:38:30 $  *  $Revision: 1.2 $  *  $NoKeywords: $  * *		Portions Copyright © 1995-2000 Metrowerks, Inc. *		All rights reserved. */ /** **  BuildDLLPrefix.h**//* This prefix used when building MSL shared libraries. */#define _MSL_IMP_EXP __declspec(dllexport)#define _MSL_NO_LOCALE

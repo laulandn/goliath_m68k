@@ -1,0 +1,1 @@
+MPWLib.o implements the following:	GETPTRSIZE	C2PSTR	P2CSTR	exit (becomes _mpwexit)	getenv	_RTInit	_DataInit	_RTExit	abort	signal	sig_dfl	raise	unlink	dup	fcntl	lseek	longjmp	StandAlone	creat	ioctl	write	read	close	open	faccess	access	create	c2pstr	p2cstr	__CplusInit

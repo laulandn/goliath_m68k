@@ -1,0 +1,1 @@
+#define	STARTUP		LIBCODE	// the code model to link#define DRIVER		0		// a driver is generated when this flag is set

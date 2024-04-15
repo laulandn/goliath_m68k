@@ -125,7 +125,11 @@ static bool IsICAvail() {
 	}
 						
 	if (ICAvailable) {
+	#ifdef __POWERPC__
 		ICAvailable = ((Ptr)ICStart != (Ptr) kUnresolvedCFragSymbolAddress);
+    #else
+        ICAvailable=true;
+    #endif
 	}
 	return ICAvailable;
 }

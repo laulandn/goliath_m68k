@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 1999/12/22 22:39:48 $  *  $Revision: 1.8.18.1 $  *  $NoKeywords: $  * *		Copyright © 1995-1999 Metrowerks, Inc. *		All rights reserved. */ /* *	errno.h*/#ifndef _ERRNO_H#define _ERRNO_H#include <cerrno>#endif/* * Change record * hh 971206 Created. * mf 990301  errno is a utility and is no longer in std.*/

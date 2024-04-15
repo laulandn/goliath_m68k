@@ -1,0 +1,1 @@
+#define		TARGET_API_MAC_CARBON				1#define		WASTE_DEPRECATED					0

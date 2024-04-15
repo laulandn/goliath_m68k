@@ -1,0 +1,1 @@
+/* Metrowerks Code Completion Support * Copyright © 2002 Metrowerks Corporation.  All rights reserved. * * $Date: 2002/04/05 17:41:19 $ * $Revision: 1.2 $ *//* C++ defines */#include <MacOS_Carbon_C++_Macros.h>/* PowerPlant defines */#include <PP_Macros.h>

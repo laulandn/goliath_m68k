@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 2000/01/15 00:48:43 $ *  $Revision: 1.1.2.1 $ *  $NoKeywords: $  * *		Copyright © 1995-1999 Metrowerks, Inc. *		All rights reserved. *//* *	MSLCarbonPrefix.h */#define TARGET_API_MAC_CARBON 1#include <os_enum.h>#define __dest_os __mac_os#define __MSL_LONGLONG_SUPPORT__

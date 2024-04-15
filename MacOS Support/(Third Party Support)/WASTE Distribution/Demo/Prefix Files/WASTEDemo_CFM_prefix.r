@@ -1,0 +1,1 @@
+#define		TARGET_API_MAC_CARBON				1#define		TARGET_RT_MAC_CFM					1#define		TARGET_RT_MAC_MACHO					0

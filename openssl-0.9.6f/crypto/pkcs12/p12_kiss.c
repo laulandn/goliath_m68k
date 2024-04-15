@@ -253,7 +253,12 @@ static int parse_bag(PKCS12_SAFEBAG *bag, const char *pass, int passlen,
 		if(fname) {
 			int len;
 			unsigned char *data;
+			#ifdef __POWERPC__
+			//NICKL
 			len = ASN1_STRING_to_UTF8(&data, fname);
+			#else
+			len=0;
+			#endif
 			if(len > 0) {
 				X509_alias_set1(x509, data, len);
 				OPENSSL_free(data);

@@ -34,6 +34,7 @@
 #include <UInternetConfig.h>
 #include <CDAVLibUtils.h>
 #include "OpenSSLGlue.h"
+#include <Timer.h>
 
 using namespace std;
 

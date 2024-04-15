@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 1999/01/22 23:42:11 $  *  $Revision: 1.2 $  *  $NoKeywords: $  * *		Copyright © 1995-1999 Metrowerks, Inc. *		All rights reserved. *//* *	config.mac.h */#ifndef __config_mac_h#define __config_mac_h#define __MSL_LONGLONG_SUPPORT__#endif

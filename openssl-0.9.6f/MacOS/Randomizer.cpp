@@ -222,6 +222,7 @@
 #include <LowMem.h>
 #include <Traps.h>
 #include <FSM.h>
+#include <Timer.h>
 
 // Standard C library
 #include <stdlib.h>

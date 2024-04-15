@@ -1,0 +1,1 @@
+/* *	WASTE Demo Project: *	Main Program * *	Copyright © 1993-2002 Marco Piovanelli *	All Rights Reserved * *	Original C Port by John C. Daub * *	<mailto:waste@merzwaren.com> *	<http://www.merzwaren.com/waste/> */#ifndef __WEDEMO__#include "WEDemo.h"#endifint main ( void ){	if ( Initialize ( ) == noErr )	{		RunApplicationEventLoop ( ) ;	}	return 0 ;}

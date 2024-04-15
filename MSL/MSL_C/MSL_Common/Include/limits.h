@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 2000/01/27 03:21:10 $  *  $Revision: 1.7.18.2 $  *  $NoKeywords: $  * *		Copyright © 1995-1999 Metrowerks, Inc. *		All rights reserved. *//* *	limits.h*/#ifndef _LIMITS_H#define _LIMITS_H#include <climits>#endif/* * Change record * hh 971206 Created. * hh 990928 fixed "using bug"*/

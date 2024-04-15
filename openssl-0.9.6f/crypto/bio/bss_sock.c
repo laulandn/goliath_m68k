@@ -221,7 +221,7 @@ static int fd_write(BIO *b, const char *in, int inl)
 	ret=writesocket(b->num,(void *)in,inl);
 #else
 	clear_sys_error();
-	ret=write(b->num,in,inl);
+	ret=write(b->num,(void *)in,inl);
 #endif
 	BIO_clear_retry_flags(b);
 	if (ret <= 0)

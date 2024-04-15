@@ -184,8 +184,9 @@ Boolean CDownloadFileThread::_downloadResource(FSSpec *rootSpec, CDAVItem* inIte
    std::string itemName;
    itemName.assign (itemHref.c_str() + lastDirDelim + 1);
 
-
+#ifdef __POWERPC__
    itemName = CDAVTranscodeUtils::TranscodeUTF8ToSystemScript(itemName);
+#endif
 
    if (mHasUrlParam) {
       itemHref.append(mUrlParam);

@@ -189,7 +189,7 @@ Boolean CIconSuiteManager::_IsSuiteEmpty( Handle theSuite ) {
 	
    retVal = true;
    ::ForEachIconDo(theSuite, svAllAvailableData, testHandleProc, &retVal);
-   DisposeRoutineDescriptor( testHandleProc );
+   DisposeRoutineDescriptor( (UniversalProcPtr)testHandleProc );
    return retVal;
 }
 

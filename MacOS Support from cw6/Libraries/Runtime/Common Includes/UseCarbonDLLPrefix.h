@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 2000/03/24 21:56:12 $  *  $Revision: 1.1 $  *  $NoKeywords: $  * *		Portions Copyright © 1995-2000 Metrowerks, Inc. *		All rights reserved. */ /** **  UseCarbonDLLPrefix.h**//* This prefix used when using Carbon MSL shared libraries. */#define TARGET_API_MAC_CARBON 1#include "UseDLLPrefix.h"

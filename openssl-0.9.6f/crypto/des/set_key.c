@@ -398,5 +398,5 @@ int des_key_sched(const_des_cblock *key, des_key_schedule schedule)
 #undef des_fixup_key_parity
 void des_fixup_key_parity(des_cblock *key)
 	{
-	des_set_odd_parity(key);
+	des_set_odd_parity((void *)key);
 	}

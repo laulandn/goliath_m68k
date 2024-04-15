@@ -1,0 +1,1 @@
+/* Metrowerks PPC Runtime Support Library  * Copyright © 1995-2002 Metrowerks Corporation.  All rights reserved. * * $Date: 2002/03/15 17:00:14 $ * $Revision: 1.2 $ *//* This prefix used when using Carbon MSL shared libraries. */#define TARGET_API_MAC_CARBON 1#include "UseDLLPrefix.h"

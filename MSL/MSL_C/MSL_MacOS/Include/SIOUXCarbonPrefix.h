@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 2000/02/13 00:51:10 $  *  $Revision: 1.1.2.2 $  *  $NoKeywords: $  * *		Copyright © 1995-2000 Metrowerks, Inc. *		All rights reserved. */ #include <MSLCarbonPrefix.h>#include <SIOUX_WASTE.h>

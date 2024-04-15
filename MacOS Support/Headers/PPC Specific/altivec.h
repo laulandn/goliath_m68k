@@ -1,0 +1,1 @@
+/* Metrowerks PPC Runtime Support Library  * Copyright © 1995-2002 Metrowerks Corporation.  All rights reserved. * * $Date: 2002/03/15 16:58:57 $ * $Revision: 1.2 $ */#if __MWERKS__ && __VEC__	#ifndef vector		#define vector __vector	#endif#endif

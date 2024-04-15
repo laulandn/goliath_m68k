@@ -1,0 +1,1 @@
+/*  Metrowerks Standard Library  *//*  $Date: 1999/12/22 22:39:48 $  *  $Revision: 1.7.18.1 $  *  $NoKeywords: $  * *		Copyright © 1995-1999 Metrowerks, Inc. *		All rights reserved. *//* *	iso646.h*/#ifndef __iso646_h#define __iso646_h#include <ciso646>#endif/* * Change record * hh 980106 Created. * hh 991113 Removed namespace support.*/

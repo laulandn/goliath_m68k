@@ -1,0 +1,1 @@
+#define TARGET_CARBON				1#define PM_USE_SESSION_APIS			0		/* set this to 1 if you don't need CarbonLib 1.0.x compatibility */

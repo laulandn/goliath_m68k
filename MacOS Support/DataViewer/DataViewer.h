@@ -1,0 +1,1 @@
+/* Metrowerks DataViewer Support Library  * Copyright © 2002 Metrowerks Corporation.  All rights reserved. * * $Date: 2002/05/14 17:13:09 $ * $Revision: 1.1 $ */#ifndef __DataViewer__#define __DataViewer__#pragma once#ifdef __cplusplus	extern "C" {#endifvoid DataViewLibInit(void);#ifdef __cplusplus	}#endif#endif /*__DataViewer__ */

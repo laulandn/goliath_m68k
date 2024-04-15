@@ -1005,7 +1005,9 @@ void CDAVTableWindow::_OnNewFolderCommand() {
    std::string folderNameCstr;
    
    folderNameCstr.append(folderName.TextPtr(), folderName.Length());
+   #ifdef __POWERPC__
    folderNameCstr = CDAVTranscodeUtils::TranscodeSystemScriptToUTF8(folderNameCstr);
+   #endif
 
    resource += folderNameCstr;
 

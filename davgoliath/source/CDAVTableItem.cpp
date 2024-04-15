@@ -208,7 +208,9 @@ void CDAVTableItem::ListenToMessage( MessageT	inMessage, void *ioParam ){
 		       return;
 		    
 		    newName.append(text.ConstTextPtr(), text.Length());
+		    #ifdef __POWERPC__
 			newName = CDAVTranscodeUtils::TranscodeSystemScriptToUTF8(newName);
+			#endif
 			
 			GetItem().GetFileName(origName);
 		    //if name hasn't changed, return
@@ -297,7 +299,9 @@ void CDAVTableItem::GetDrawContentsSelf( const STableCell& inCell, SOutlineDrawC
 #endif
 			ioDrawContents.outCanDoInPlaceEdit = true;
             GetItem().GetFileName(stdText);
+            #ifdef __POWERPC__
             stdText = CDAVTranscodeUtils::TranscodeUTF8ToSystemScript(stdText);
+            #endif
             
             text = stdText.c_str();
             LString::CopyPStr(text, ioDrawContents.outTextString);

@@ -578,8 +578,10 @@ UInternetConfig::PP_ICStart(OSType inCreator, ICDirSpecArrayPtr inDirArrayPtr)
 			ThrowIfOSErr_(::GetProcessInformation(&thisProcess, &info));
 			inCreator = info.processSignature;
 		}
-		
+		#ifdef __POWERPC__
+		//NICKL
 		err = ICStart(&sICInstance, inCreator);
+		#endif
 		if (err)
 			 return err;
 		
@@ -613,7 +615,10 @@ void
 UInternetConfig::PP_ICStop()
 {
 	if (sICInited) {
+	#ifdef __POWERPC__
+	//NICKL
 		 ICStop(sICInstance);
+		 #endif
 	}
 }
 

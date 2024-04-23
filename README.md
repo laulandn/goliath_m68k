@@ -5,16 +5,16 @@ https://macintoshgarden.org/apps/goliath-101
 
 Very nice, WebDAV client, drag and drop from "Finder" like windows.
 
-Includes all needed dependencies.
-
 For CodeWarior Pro 6.
 
+Includes all needed dependencies.
+
++ DAVLib
 + Includes hacked "MacOS Support" and "MSL" from CodeWarrior 8.
 (Needed to build the application)
 + Includes hacked "MacOS Support" from CodeWarrior 6.
 (Needed to build OpenSSL libraries)
-
-+ Includes hacked OpenSSL 0.9.6f.
++ OpenSSL 0.9.6f (slightly hacked to get working)
 
 
 Does NOT fully support Unicode, as original source used MacOS 8.5+ system library, which never existed for m68k Macs (as far as I know).

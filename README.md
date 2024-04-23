@@ -26,3 +26,5 @@ For MacOS 7.5.0+.
 + Requires Appearance Manager (Will not launch or crash at start without).
 + Requires OpenTransport (Starts, but not functional without).
 + Requires Internet Config 2.0+ (Will warn if not avail).
+
+NOTE: There is a bug that will cause files to have generic looking icons on some systems that I have not fully tracked down.
